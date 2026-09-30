@@ -19,7 +19,7 @@
     { id: 'licorice', name: 'Licorice', line: 'a fresh coloring page every time', href: HUB + 'licorice/', dot: '#9447cf' },
     { id: 'radiance', name: 'Radiance', line: 'even color palettes', href: HUB + 'Radiance/', dot: '#e8743b' },
     { id: 'sjonis', name: 'Sjonis', line: 'themeable UI kit', href: HUB + 'Sjonis/', dot: '#3593da' },
-    { id: 'flocker-core', name: 'flocker-core', line: 'swarm optimizer', href: 'https://github.com/grbsoftware/flocker-core', dot: '#5fb544' },
+    { id: 'flocker-core', name: 'Flocker', line: 'swarm optimizer', href: 'https://github.com/grbsoftware/flocker-core', dot: '#5fb544' },
   ];
 
   const CSS = `
