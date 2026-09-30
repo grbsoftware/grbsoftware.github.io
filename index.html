@@ -71,6 +71,7 @@ main{width:min(600px,100% - 32px);margin:0 auto;padding:56px 0 24px}
   box-shadow:0 14px 30px -18px rgba(23,20,28,.45)}
 .link:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 .tile{width:64px;height:64px;border-radius:14px;overflow:hidden;display:block}
+img.tile{padding:3px;background:color-mix(in srgb,var(--ink) 5%,transparent)}
 .link h2{font:700 20px/1.2 var(--display);margin:0 0 2px}
 .link p{margin:0;color:var(--muted);font-size:15px;line-height:1.4}
 .where{font-size:12.5px;font-weight:700;color:var(--faint);letter-spacing:.02em;white-space:nowrap}
@@ -116,9 +117,7 @@ footer a:hover{text-decoration:underline}
 
   <ul class="links">
     <li><a class="link" href="https://grbsoftware.github.io/licorice/">
-      <svg class="tile" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#f4ebfb"/>
-        <path d="M0 22q16-6 32 0t32 0M0 44q16-6 32 0t32 0M22 0q-6 16 0 32t0 32M44 0q-6 16 0 32t0 32" stroke="#17141c" stroke-width="1.6" fill="none"/>
-        <circle cx="33" cy="33" r="10" fill="#9447cf" stroke="#17141c" stroke-width="1.6"/><circle cx="11" cy="11" r="6" fill="#5fb544"/><circle cx="54" cy="54" r="6" fill="#3593da"/></svg>
+      <img class="tile" src="icons/licorice.png" width="64" height="64" alt="">
       <div><h2>Licorice</h2><p>A coloring app. Every page is a brand-new drawing to color in.</p></div>
       <svg class="arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4.5-5L15 10l-4.5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a></li>
