@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>grbsoftware · free tools for color, drawing and design</title>
+<meta name="description" content="Free browser tools by grbsoftware: Licorice, a coloring app with a fresh page every time; Radiance, an even color palette generator; Sjonis, a themeable UI kit; and more.">
+<link rel="canonical" href="https://grbsoftware.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="grbsoftware">
+<meta property="og:url" content="https://grbsoftware.github.io/">
+<meta property="og:title" content="grbsoftware">
+<meta property="og:description" content="Free tools for color, drawing and design that run in your browser.">
+<meta property="og:image" content="https://grbsoftware.github.io/licorice/img/social.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#17141c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 3S6 14 6 20a10 10 0 0 0 20 0C26 14 16 3 16 3z' fill='%239447cf'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700;6..12,800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://grbsoftware.github.io/#org",
+      "name": "grbsoftware",
+      "url": "https://grbsoftware.github.io/",
+      "sameAs": ["https://github.com/grbsoftware", "https://ko-fi.com/grbsoftware"]
+    },
+    {
+      "@type": "ItemList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "item": {"@type": "SoftwareApplication", "name": "Licorice", "url": "https://grbsoftware.github.io/licorice/", "applicationCategory": "DesignApplication", "operatingSystem": "Any (web browser)", "description": "A free coloring app. Every page is a brand-new drawing to color in.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@id": "https://grbsoftware.github.io/#org"}}},
+        {"@type": "ListItem", "position": 2, "item": {"@type": "SoftwareApplication", "name": "Radiance", "url": "https://grbsoftware.github.io/Radiance/", "applicationCategory": "DesignApplication", "operatingSystem": "Any (web browser)", "description": "Color palette generator: pick 2 to 5 anchor colors and get perceptually even bridges between them.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@id": "https://grbsoftware.github.io/#org"}}},
+        {"@type": "ListItem", "position": 3, "item": {"@type": "SoftwareSourceCode", "name": "Sjonis", "url": "https://grbsoftware.github.io/Sjonis/", "codeRepository": "https://github.com/grbsoftware/Sjonis", "description": "A token-driven UI suite: layout archetypes and swappable themes, vanilla CSS and JS.", "author": {"@id": "https://grbsoftware.github.io/#org"}}},
+        {"@type": "ListItem", "position": 4, "item": {"@type": "SoftwareSourceCode", "name": "flocker-core", "url": "https://github.com/grbsoftware/flocker-core", "codeRepository": "https://github.com/grbsoftware/flocker-core", "description": "Swarm optimizer: boids and particle swarm optimization as one re-aimable perceptron.", "author": {"@id": "https://grbsoftware.github.io/#org"}}}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --paper:#fbfaf8;--card:#ffffff;--ink:#17141c;--muted:#5f5968;--faint:#8b8594;--line:#e9e5ee;
+  --purple:#9447cf;--green:#5fb544;--blue:#3593da;--orange:#e8743b;
+  --display:"Fraunces",Georgia,serif;
+  --body:"Nunito Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#131118;--card:#1c1922;--ink:#efebf4;--muted:#b3acbd;--faint:#8a8394;--line:#2d2934;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#131118;--card:#1c1922;--ink:#efebf4;--muted:#b3acbd;--faint:#8a8394;--line:#2d2934;color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.55 var(--body)}
+a{color:inherit}
+main{width:min(600px,100% - 32px);margin:0 auto;padding:56px 0 24px}
+
+.me{text-align:center;margin-bottom:34px}
+.mark{width:84px;height:84px;margin:0 auto 14px;display:block}
+.me h1{font:700 clamp(30px,6vw,40px)/1.1 var(--display);margin:0 0 8px;letter-spacing:-.01em}
+.me p{margin:0 auto;color:var(--muted);max-width:26em;text-wrap:balance}
+
+.links{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.link{display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:16px;padding:12px 18px 12px 12px;
+  background:var(--card);border:1px solid var(--line);border-radius:20px;text-decoration:none;
+  transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease}
+.link:hover,.link:focus-visible{transform:translateY(-2px);border-color:color-mix(in srgb,var(--ink) 22%,transparent);
+  box-shadow:0 14px 30px -18px rgba(23,20,28,.45)}
+.link:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.tile{width:64px;height:64px;border-radius:14px;overflow:hidden;display:block}
+.link h2{font:700 20px/1.2 var(--display);margin:0 0 2px}
+.link p{margin:0;color:var(--muted);font-size:15px;line-height:1.4}
+.where{font-size:12.5px;font-weight:700;color:var(--faint);letter-spacing:.02em;white-space:nowrap}
+.arrow{width:18px;height:18px;color:var(--faint);transition:transform .15s ease}
+.link:hover .arrow{transform:translateX(3px)}
+
+.tip{margin:26px 0 0;padding:24px;text-align:center;border-radius:22px;border:1px solid var(--line);
+  background:radial-gradient(120% 140% at 0% 0%,color-mix(in srgb,var(--green) 12%,transparent) 0,transparent 55%),
+    radial-gradient(120% 140% at 100% 0%,color-mix(in srgb,var(--purple) 12%,transparent) 0,transparent 55%),var(--card)}
+.tip h2{font:700 22px/1.2 var(--display);margin:0 0 6px}
+.tip p{margin:0 auto 18px;color:var(--muted);max-width:28em;font-size:16px}
+.tip-btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);text-decoration:none;
+  font:800 17px/1 var(--body);padding:15px 26px 15px 22px;border-radius:999px;transition:transform .15s ease}
+.tip-btn svg{width:22px;height:22px}
+.tip-btn:hover{transform:translateY(-2px)}
+.tip-btn:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+
+footer{width:min(600px,100% - 32px);margin:0 auto;padding:22px 0 40px;display:flex;justify-content:center;gap:18px;
+  font-size:14px;color:var(--faint)}
+footer a{color:var(--muted);font-weight:700;text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+@media (max-width:480px){
+  main{padding-top:40px}
+  .link{grid-template-columns:52px 1fr auto;gap:12px;padding:10px 14px 10px 10px}
+  .tile{width:52px;height:52px;border-radius:12px}
+  .where{display:none}
+}
+@media (prefers-reduced-motion:reduce){.link,.arrow,.tip-btn{transition:none}.link:hover,.tip-btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<main>
+  <header class="me">
+    <svg class="mark" viewBox="0 0 84 84" aria-hidden="true">
+      <path d="M28 10S12 30 12 40a16 16 0 0 0 32 0C44 30 28 10 28 10z" fill="#9447cf"/>
+      <path d="M56 22S42 39 42 48a14 14 0 0 0 28 0C70 39 56 22 56 22z" fill="#3593da" opacity=".92"/>
+      <path d="M40 44S28 58 28 65a12 12 0 0 0 24 0C52 58 40 44 40 44z" fill="#5fb544" opacity=".92"/>
+    </svg>
+    <h1>grbsoftware</h1>
+    <p>Free tools for color, drawing and design. They all run in your browser, with nothing to install.</p>
+  </header>
+
+  <ul class="links">
+    <li><a class="link" href="https://grbsoftware.github.io/licorice/">
+      <svg class="tile" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#f4ebfb"/>
+        <path d="M0 22q16-6 32 0t32 0M0 44q16-6 32 0t32 0M22 0q-6 16 0 32t0 32M44 0q-6 16 0 32t0 32" stroke="#17141c" stroke-width="1.6" fill="none"/>
+        <circle cx="33" cy="33" r="10" fill="#9447cf" stroke="#17141c" stroke-width="1.6"/><circle cx="11" cy="11" r="6" fill="#5fb544"/><circle cx="54" cy="54" r="6" fill="#3593da"/></svg>
+      <div><h2>Licorice</h2><p>A coloring app. Every page is a brand-new drawing to color in.</p></div>
+      <svg class="arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4.5-5L15 10l-4.5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a></li>
+    <li><a class="link" href="https://grbsoftware.github.io/Radiance/">
+      <svg class="tile" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="rg" x1="0" x2="1"><stop offset="0" stop-color="#2b3a8f"/><stop offset=".5" stop-color="#c2477a"/><stop offset="1" stop-color="#f2b33d"/></linearGradient></defs>
+        <rect width="64" height="64" fill="url(#rg)"/><g fill="#fff" opacity=".9"><rect x="8" y="44" width="8" height="12" rx="2"/><rect x="20" y="44" width="8" height="12" rx="2"/><rect x="32" y="44" width="8" height="12" rx="2"/><rect x="44" y="44" width="8" height="12" rx="2"/></g></svg>
+      <div><h2>Radiance</h2><p>Pick a few colors and get perfectly even palettes between them.</p></div>
+      <svg class="arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4.5-5L15 10l-4.5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a></li>
+    <li><a class="link" href="https://grbsoftware.github.io/Sjonis/">
+      <svg class="tile" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#e6f1fb"/>
+        <rect x="8" y="8" width="48" height="10" rx="3" fill="#3593da"/><rect x="8" y="22" width="16" height="34" rx="3" fill="#17141c" opacity=".8"/>
+        <rect x="28" y="22" width="28" height="15" rx="3" fill="#fff" stroke="#3593da" stroke-width="1.5"/><rect x="28" y="41" width="28" height="15" rx="3" fill="#fff" stroke="#3593da" stroke-width="1.5"/></svg>
+      <div><h2>Sjonis</h2><p>A themeable UI kit: layouts and swappable themes in plain CSS and JS.</p></div>
+      <svg class="arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4.5-5L15 10l-4.5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a></li>
+    <li><a class="link" href="https://github.com/grbsoftware/flocker-core">
+      <svg class="tile" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#1d2a1a"/>
+        <g fill="#8fd672"><path d="M14 40l8-3-3 8z"/><path d="M24 30l8-3-3 8z"/><path d="M36 34l8-3-3 8z"/><path d="M30 18l8-3-3 8z"/><path d="M44 22l8-3-3 8z"/><path d="M20 50l8-3-3 8z"/></g></svg>
+      <div><h2>flocker-core</h2><p>A swarm optimizer library, for developers. <span class="where">on GitHub</span></p></div>
+      <svg class="arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4.5-5L15 10l-4.5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a></li>
+  </ul>
+
+  <section class="tip" aria-labelledby="tip">
+    <h2 id="tip">Enjoying these?</h2>
+    <p>Everything here is free. If something made your day a little better, you can buy me a coffee. No account needed.</p>
+    <a class="tip-btn" href="https://ko-fi.com/grbsoftware" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h13v5a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6V8zm13 1h1.5a2.5 2.5 0 0 1 0 5H17" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 3.5c0 1 1 1 1 2M13 3.5c0 1 1 1 1 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      Leave a tip</a>
+  </section>
+</main>
+<footer>
+  <a href="https://github.com/grbsoftware">GitHub</a>
+  <span>&copy; 2026 grbsoftware</span>
+</footer>
+</body>
+</html>
