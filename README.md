@@ -24,4 +24,5 @@ normally auto-detected), `tone="light"` / `tone="dark"` (force colors).
 
 1. Add it to `PROJECTS` in `crumbs.js` (every site's footer updates on next load).
 2. Add a card to `index.html` and an entry to its JSON-LD block.
-3. Add its URL to `sitemap.xml`.
+3. Add its URL to `sitemap.xml` with a `<lastmod>` date (the day its page last changed). When a
+   project pushes a real change to a listed page, bump that page's `<lastmod>` here too.
