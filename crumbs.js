@@ -20,6 +20,7 @@
     { id: 'radiance', name: 'Radiance', line: 'even color palettes', href: HUB + 'Radiance/', dot: '#e8743b' },
     { id: 'sjonis', name: 'Sjonis', line: 'themeable UI kit', href: HUB + 'Sjonis/', dot: '#3593da' },
     { id: 'flocker-core', name: 'Flocker', line: 'swarm optimizer', href: 'https://github.com/grbsoftware/flocker-core', dot: '#5fb544' },
+    { id: 'licium', name: 'Licium', line: 'music-reactive shader explorer', href: 'https://github.com/grbsoftware/Licium', dot: 'currentColor' },
   ];
 
   const CSS = `
