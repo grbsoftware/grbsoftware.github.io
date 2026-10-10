@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>grbsoftware · free tools for color, drawing and design</title>
-<meta name="description" content="Free browser tools by grbsoftware: Licorice, a coloring app with a fresh page every time; Radiance, an even color palette generator; Sjonis, a themeable UI kit; and more.">
+<meta name="description" content="Free tools by grbsoftware: Licorice, a coloring app with a fresh page every time; Radiance, an even color palette generator; Sjonis, a UI kit; and more.">
 <link rel="canonical" href="https://grbsoftware.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="grbsoftware">
 <meta property="og:url" content="https://grbsoftware.github.io/">
 <meta property="og:title" content="grbsoftware">
-<meta property="og:description" content="Free tools for color, drawing and design that run in your browser.">
+<meta property="og:description" content="Free tools for color, drawing and design, plus a few stranger experiments.">
 <meta property="og:image" content="https://grbsoftware.github.io/licorice/img/social.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#17141c">
@@ -74,9 +74,12 @@ main{width:min(600px,100% - 32px);margin:0 auto;padding:56px 0 24px}
 .tile{width:64px;height:64px;border-radius:14px;overflow:hidden;display:block}
 img.tile{padding:3px;background:color-mix(in srgb,var(--ink) 5%,transparent)}
 img.tile.solid{padding:0;background:none}
-.link h2{font:700 20px/1.2 var(--display);margin:0 0 2px}
+.link h3{font:700 20px/1.2 var(--display);margin:0 0 2px}
 .link p{margin:0;color:var(--muted);font-size:15px;line-height:1.4}
-.where{font-size:12.5px;font-weight:700;color:var(--faint);letter-spacing:.02em;white-space:nowrap}
+.group{margin:30px 0 12px;padding:0 4px;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.group:first-of-type{margin-top:0}
+.group h2{font:700 15px/1.2 var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0}
+.group p{margin:0;font-size:14px;color:var(--faint)}
 .arrow{width:18px;height:18px;color:var(--faint);transition:transform .15s ease}
 .link:hover .arrow{transform:translateX(3px)}
 
@@ -100,7 +103,6 @@ footer a:hover{text-decoration:underline}
   main{padding-top:40px}
   .link{grid-template-columns:52px 1fr auto;gap:12px;padding:10px 14px 10px 10px}
   .tile{width:52px;height:52px;border-radius:12px}
-  .where{display:none}
 }
 @media (prefers-reduced-motion:reduce){.link,.arrow,.tip-btn{transition:none}.link:hover,.tip-btn:hover{transform:none}}
 </style>
@@ -114,33 +116,38 @@ footer a:hover{text-decoration:underline}
       <path d="M40 44S28 58 28 65a12 12 0 0 0 24 0C52 58 40 44 40 44z" fill="#5fb544" opacity=".92"/>
     </svg>
     <h1>grbsoftware</h1>
-    <p>Free tools for color, drawing and design. They all run in your browser, with nothing to install.</p>
+    <p>Free tools for color, drawing and design, and a few stranger experiments.</p>
   </header>
 
+  <div class="group"><h2>In your browser</h2><p>Free, nothing to install</p></div>
   <ul class="links">
     <li><a class="link" href="https://grbsoftware.github.io/licorice/">
       <img class="tile" src="icons/licorice.png" width="64" height="64" alt="">
-      <div><h2>Licorice</h2><p>A coloring app. Every page is a brand-new drawing to color in.</p></div>
+      <div><h3>Licorice</h3><p>A coloring app. Every page is a brand-new drawing to color in.</p></div>
       <svg class="arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4.5-5L15 10l-4.5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a></li>
     <li><a class="link" href="https://grbsoftware.github.io/Radiance/">
       <img class="tile" src="icons/radiance.png" width="64" height="64" alt="">
-      <div><h2>Radiance</h2><p>Pick a few colors and get perfectly even palettes between them.</p></div>
+      <div><h3>Radiance</h3><p>Pick a few colors and get perfectly even palettes between them.</p></div>
       <svg class="arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4.5-5L15 10l-4.5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a></li>
     <li><a class="link" href="https://grbsoftware.github.io/Sjonis/">
       <img class="tile solid" src="icons/sjonis.png" width="64" height="64" alt="">
-      <div><h2>Sjonis</h2><p>A themeable UI kit: layouts and swappable themes in plain CSS and JS.</p></div>
+      <div><h3>Sjonis</h3><p>A themeable UI kit: layouts and swappable themes in plain CSS and JS.</p></div>
       <svg class="arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4.5-5L15 10l-4.5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a></li>
+  </ul>
+
+  <div class="group"><h2>Experiments</h2><p>Open source, on GitHub</p></div>
+  <ul class="links">
     <li><a class="link" href="https://github.com/grbsoftware/flocker-core">
       <img class="tile solid" src="icons/flocker.png" width="64" height="64" alt="">
-      <div><h2>Flocker</h2><p>A swarm optimizer library, for developers. <span class="where">on GitHub</span></p></div>
+      <div><h3>Flocker</h3><p>A swarm optimizer library, for developers.</p></div>
       <svg class="arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4.5-5L15 10l-4.5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a></li>
     <li><a class="link" href="https://github.com/grbsoftware/Licium">
       <img class="tile solid" src="icons/licium.png" width="64" height="64" alt="">
-      <div><h2>Licium</h2><p>A music visualizer that invents its own shader visuals. Windows, now shelved. <span class="where">on GitHub</span></p></div>
+      <div><h3>Licium</h3><p>A music visualizer that invents its own shader visuals. Windows, now shelved.</p></div>
       <svg class="arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4.5-5L15 10l-4.5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a></li>
   </ul>
